@@ -4,19 +4,19 @@
 
 
 /* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 
 /* Set the background color for my page: */
 body{
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(42, 112, 100);
  
 }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
-h1, h3, p{
-    color:rgb(17, 17, 17);
+h1, h2, h3, p{
+    color:rgb(8, 8, 8);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -24,18 +24,18 @@ h1, h3, p{
 .myWeek1{
     margin: auto;
     max-width: 600px;
-    background-color: bisque;
+    background-color: rgb(220, 220, 220);
 }
 
 
 /* Set the apperance of the class, chart */
 .chart{
-    background-color: orange;
+    background-color: rgb(210, 187, 145);
     width:330px;
-    border-width: 10px;
+    border-width: 15px;
     border-style: solid;
     border-radius: 5px;
-    border-color: red;
+    border-color: rgb(84, 77, 77);
 
     
 }
