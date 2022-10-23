@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "width": 300,
+  "height": 300,
+  "title": {
+    "text": "IMF Lending Outstanding - Percentage of Global GDP",
+    "subtitle": "Credit outstanding to all members, SDRs (% of Global GDP), 1984-2021. Source : IMF",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "style": "cell",
+  "data": [
+    {
+      "name": "source_0",
+      "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/data_IMF_GDP.csv",
+      "format": {"type": "csv", "parse": {"Year": "date"}, "delimiter": ","},
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum.Totals/1000000000",
+          "as": "billions"
+        },
+        {
+          "type": "stack",
+          "groupby": ["Year"],
+          "field": "%_GDP",
+          "sort": {"field": [], "order": []},
+          "as": ["%_GDP_start", "%_GDP_end"],
+          "offset": "zero"
+        },
+        {
+          "type": "filter",
+          "expr": "(isDate(datum[\"Year\"]) || (isValid(datum[\"Year\"]) && isFinite(+datum[\"Year\"]))) && isValid(datum[\"%_GDP\"]) && isFinite(+datum[\"%_GDP\"])"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "name": "marks",
+      "type": "rect",
+      "style": ["bar"],
+      "from": {"data": "source_0"},
+      "encode": {
+        "update": {
+          "fill": {"value": "rgb(0,47,167)"},
+          "ariaRoleDescription": {"value": "bar"},
+          "description": {
+            "signal": "\"Year: \" + (timeFormat(datum[\"Year\"], '%b %d, %Y')) + \"; %_GDP: \" + (format(datum[\"%_GDP\"], \"\"))"
+          },
+          "xc": {"scale": "x", "field": "Year"},
+          "width": {"value": 5},
+          "y": {"scale": "y", "field": "%_GDP_end"},
+          "y2": {"scale": "y", "field": "%_GDP_start"}
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "time",
+      "domain": {"data": "source_0", "field": "Year"},
+      "range": [0, {"signal": "width"}],
+      "padding": 5
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": {"data": "source_0", "fields": ["%_GDP_start", "%_GDP_end"]},
+      "range": [{"signal": "height"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "grid": false,
+      "labelAngle": 45,
+      "ticks": false,
+      "labelAlign": "left",
+      "labelBaseline": "top",
+      "labelFlush": true,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(width/40)"},
+      "zindex": 0
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "grid": false,
+      "labelOverlap": true,
+      "tickCount": {"signal": "ceil(height/40)"},
+      "zindex": 0
+    }
+  ],
+  "config": {}
+}
