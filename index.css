@@ -33,6 +33,12 @@ h1, h2, h3, p{
     background-color: rgb(220, 220, 220);
 }
 
+.myWeek3{
+    margin: auto;
+    max-width: 600px;
+    background-color: rgb(220, 220, 220);
+}
+
 /* Set the apperance of the class, chart */
 .chart{
     background-color: rgb(210, 187, 145);
@@ -41,8 +47,9 @@ h1, h2, h3, p{
     border-style: solid;
     border-radius: 5px;
     border-color: rgb(84, 77, 77);
-  
-
-    
+      
 }
+
+
+
     
