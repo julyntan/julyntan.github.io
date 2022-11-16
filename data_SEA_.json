@@ -1,0 +1,365 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "title": {
+    "text": "GDP of South East Asian Countries",
+    "subtitle": "GDP per capita (PPP at current international $) 2002-2021, Source: World Bank",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "values": [
+      {"Country Name": "Malaysia", "Time": 2002, "GDP per capita": 13595.39868},
+      {"Country Name": "Malaysia", "Time": 2003, "GDP per capita": 14375.00006},
+      {"Country Name": "Malaysia", "Time": 2004, "GDP per capita": 15454.4359},
+      {"Country Name": "Malaysia", "Time": 2005, "GDP per capita": 16462.22094},
+      {"Country Name": "Malaysia", "Time": 2006, "GDP per capita": 17568.26094},
+      {"Country Name": "Malaysia", "Time": 2007, "GDP per capita": 18807.43054},
+      {"Country Name": "Malaysia", "Time": 2008, "GDP per capita": 19713.87676},
+      {"Country Name": "Malaysia", "Time": 2009, "GDP per capita": 19188.36498},
+      {"Country Name": "Malaysia", "Time": 2010, "GDP per capita": 20511.00574},
+      {"Country Name": "Malaysia", "Time": 2011, "GDP per capita": 21704.74427},
+      {"Country Name": "Malaysia", "Time": 2012, "GDP per capita": 22985.80166},
+      {"Country Name": "Malaysia", "Time": 2013, "GDP per capita": 23477.99117},
+      {"Country Name": "Malaysia", "Time": 2014, "GDP per capita": 24607.66873},
+      {"Country Name": "Malaysia", "Time": 2015, "GDP per capita": 24801.88843},
+      {"Country Name": "Malaysia", "Time": 2016, "GDP per capita": 25546.12952},
+      {"Country Name": "Malaysia", "Time": 2017, "GDP per capita": 26661.50742},
+      {"Country Name": "Malaysia", "Time": 2018, "GDP per capita": 28236.20719},
+      {"Country Name": "Malaysia", "Time": 2019, "GDP per capita": 29620.97866},
+      {"Country Name": "Malaysia", "Time": 2020, "GDP per capita": 27921.41095},
+      {"Country Name": "Malaysia", "Time": 2021, "GDP per capita": 29617.29676},
+      {"Country Name": "Thailand", "Time": 2002, "GDP per capita": 8172.994164},
+      {"Country Name": "Thailand", "Time": 2003, "GDP per capita": 8866.93177},
+      {"Country Name": "Thailand", "Time": 2004, "GDP per capita": 9611.274226},
+      {"Country Name": "Thailand", "Time": 2005, "GDP per capita": 10261.32491},
+      {"Country Name": "Thailand", "Time": 2006, "GDP per capita": 11036.56937},
+      {"Country Name": "Thailand", "Time": 2007, "GDP per capita": 11884.17388},
+      {"Country Name": "Thailand", "Time": 2008, "GDP per capita": 12256.50575},
+      {"Country Name": "Thailand", "Time": 2009, "GDP per capita": 12188.34839},
+      {"Country Name": "Thailand", "Time": 2010, "GDP per capita": 13196.8176},
+      {"Country Name": "Thailand", "Time": 2011, "GDP per capita": 13519.12902},
+      {"Country Name": "Thailand", "Time": 2012, "GDP per capita": 14870.97555},
+      {"Country Name": "Thailand", "Time": 2013, "GDP per capita": 15407.6654},
+      {"Country Name": "Thailand", "Time": 2014, "GDP per capita": 15480.21079},
+      {"Country Name": "Thailand", "Time": 2015, "GDP per capita": 15822.37099},
+      {"Country Name": "Thailand", "Time": 2016, "GDP per capita": 16616.195},
+      {"Country Name": "Thailand", "Time": 2017, "GDP per capita": 17422.95235},
+      {"Country Name": "Thailand", "Time": 2018, "GDP per capita": 18533.96473},
+      {"Country Name": "Thailand", "Time": 2019, "GDP per capita": 19216.84294},
+      {"Country Name": "Thailand", "Time": 2020, "GDP per capita": 18197.94241},
+      {"Country Name": "Thailand", "Time": 2021, "GDP per capita": 19209.49244},
+      {
+        "Country Name": "Philippines",
+        "Time": 2002,
+        "GDP per capita": 3655.106486
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2003,
+        "GDP per capita": 3837.297649
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2004,
+        "GDP per capita": 4116.937566
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2005,
+        "GDP per capita": 4372.500231
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2006,
+        "GDP per capita": 4662.660671
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2007,
+        "GDP per capita": 5014.31919
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2008,
+        "GDP per capita": 5244.727884
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2009,
+        "GDP per capita": 5267.170014
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2010,
+        "GDP per capita": 5626.897925
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2011,
+        "GDP per capita": 5865.343551
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2012,
+        "GDP per capita": 6296.827614
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2013,
+        "GDP per capita": 6614.683524
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2014,
+        "GDP per capita": 6960.900716
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2015,
+        "GDP per capita": 7186.76928
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2016,
+        "GDP per capita": 7703.762275
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2017,
+        "GDP per capita": 8120.868793
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2018,
+        "GDP per capita": 8719.587979
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2019,
+        "GDP per capita": 9290.966062
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2020,
+        "GDP per capita": 8394.242258
+      },
+      {
+        "Country Name": "Philippines",
+        "Time": 2021,
+        "GDP per capita": 9119.693358
+      },
+      {"Country Name": "Vietnam", "Time": 2002, "GDP per capita": 2900.084242},
+      {"Country Name": "Vietnam", "Time": 2003, "GDP per capita": 3131.87653},
+      {"Country Name": "Vietnam", "Time": 2004, "GDP per capita": 3426.624757},
+      {"Country Name": "Vietnam", "Time": 2005, "GDP per capita": 3765.900155},
+      {"Country Name": "Vietnam", "Time": 2006, "GDP per capita": 4114.469612},
+      {"Country Name": "Vietnam", "Time": 2007, "GDP per capita": 4484.427754},
+      {"Country Name": "Vietnam", "Time": 2008, "GDP per capita": 4783.072979},
+      {"Country Name": "Vietnam", "Time": 2009, "GDP per capita": 5024.122071},
+      {"Country Name": "Vietnam", "Time": 2010, "GDP per capita": 5357.243036},
+      {"Country Name": "Vietnam", "Time": 2011, "GDP per capita": 5759.911338},
+      {"Country Name": "Vietnam", "Time": 2012, "GDP per capita": 6329.555554},
+      {"Country Name": "Vietnam", "Time": 2013, "GDP per capita": 6688.774305},
+      {"Country Name": "Vietnam", "Time": 2014, "GDP per capita": 7202.924215},
+      {"Country Name": "Vietnam", "Time": 2015, "GDP per capita": 7555.845811},
+      {"Country Name": "Vietnam", "Time": 2016, "GDP per capita": 8232.254094},
+      {"Country Name": "Vietnam", "Time": 2017, "GDP per capita": 8996.378103},
+      {"Country Name": "Vietnam", "Time": 2018, "GDP per capita": 9776.8195},
+      {"Country Name": "Vietnam", "Time": 2019, "GDP per capita": 10561.97128},
+      {"Country Name": "Vietnam", "Time": 2020, "GDP per capita": 10904.45215},
+      {"Country Name": "Vietnam", "Time": 2021, "GDP per capita": 11553.06992},
+      {
+        "Country Name": "Singapore",
+        "Time": 2002,
+        "GDP per capita": 45080.26634
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2003,
+        "GDP per capita": 48774.72472
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2004,
+        "GDP per capita": 54377.34385
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2005,
+        "GDP per capita": 58814.91445
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2006,
+        "GDP per capita": 64054.27086
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2007,
+        "GDP per capita": 68793.70978
+      },
+      {"Country Name": "Singapore", "Time": 2008, "GDP per capita": 67718.4183},
+      {
+        "Country Name": "Singapore",
+        "Time": 2009,
+        "GDP per capita": 66212.31751
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2010,
+        "GDP per capita": 75389.76818
+      },
+      {"Country Name": "Singapore", "Time": 2011, "GDP per capita": 80052.3915},
+      {
+        "Country Name": "Singapore",
+        "Time": 2012,
+        "GDP per capita": 82064.96119
+      },
+      {"Country Name": "Singapore", "Time": 2013, "GDP per capita": 83001.7878},
+      {
+        "Country Name": "Singapore",
+        "Time": 2014,
+        "GDP per capita": 84423.19134
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2015,
+        "GDP per capita": 86974.74762
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2016,
+        "GDP per capita": 89436.59811
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2017,
+        "GDP per capita": 95310.33386
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2018,
+        "GDP per capita": 100686.2371
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2019,
+        "GDP per capita": 102431.3157
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2020,
+        "GDP per capita": 99681.29415
+      },
+      {
+        "Country Name": "Singapore",
+        "Time": 2021,
+        "GDP per capita": 116486.4732
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2002,
+        "GDP per capita": 5186.301459
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2003,
+        "GDP per capita": 5467.231552
+      },
+      {"Country Name": "Indonesia", "Time": 2004, "GDP per capita": 5817.83337},
+      {
+        "Country Name": "Indonesia",
+        "Time": 2005,
+        "GDP per capita": 6257.657476
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2006,
+        "GDP per capita": 6715.707869
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2007,
+        "GDP per capita": 7238.369541
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2008,
+        "GDP per capita": 7718.025586
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2009,
+        "GDP per capita": 8019.730683
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2010,
+        "GDP per capita": 8506.680565
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2011,
+        "GDP per capita": 9095.741723
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2012,
+        "GDP per capita": 9713.900487
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2013,
+        "GDP per capita": 10067.46574
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2014,
+        "GDP per capita": 10278.17731
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2015,
+        "GDP per capita": 10247.20634
+      },
+      {"Country Name": "Indonesia", "Time": 2016, "GDP per capita": 10494.4738},
+      {
+        "Country Name": "Indonesia",
+        "Time": 2017,
+        "GDP per capita": 10935.63172
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2018,
+        "GDP per capita": 11643.39732
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2019,
+        "GDP per capita": 12310.62737
+      },
+      {
+        "Country Name": "Indonesia",
+        "Time": 2020,
+        "GDP per capita": 12072.43996
+      },
+      {"Country Name": "Indonesia", "Time": 2021, "GDP per capita": 12904.33506}
+    ]
+  },
+  "height": 230,
+  "width": 350,
+  "mark": "area",
+  "encoding": {
+    "x": {"field": "Time", "type": "nominal"},
+    "y": {"field": "GDP per capita", "type": "quantitative"},
+    "color": {
+      "field": "Country Name",
+      "type": "nominal",
+      "legend": {"orient": "top"}
+    }
+  },
+  "config": {}
+}
