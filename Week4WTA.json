@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with embedded data.",
+    "title":{
+    "text": "Current Top Female Tennis Players in the World",
+      "subtitle": "Top 20 Female Tennis Players by points as of Novermber 2022, Source: ESPN",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 9,
+      "anchor": "start",
+      "color": "black"
+      },
+    "data": {
+      "values": [{"Rank": 1, "Name": "Iga Swiatek", "Points": 11085}, {"Rank": 2, "Name": "Ons Jabeur", "Points": 5055}, {"Rank": 3, "Name": "Jessica Pegula", "Points": 4691}, {"Rank": 4, "Name": "Caroline Garcia", "Points": 4375}, {"Rank": 5, "Name": "Aryna Sabalenka", "Points": 3925}, {"Rank": 6, "Name": "Maria Sakkari", "Points": 3871}, {"Rank": 7, "Name": "Coco Gauff", "Points": 3646}, {"Rank": 8, "Name": "Daria Kasatkina", "Points": 3435}, {"Rank": 9, "Name": "Veronika Kudermetova", "Points": 2795}, {"Rank": 10, "Name": "Simona Halep", "Points": 2661}, {"Rank": 11, "Name": "Madison Keys", "Points": 2417}, {"Rank": 12, "Name": "Belinda Bencic", "Points": 2365}, {"Rank": 13, "Name": "Paula Badosa", "Points": 2363}, {"Rank": 14, "Name": "Danielle Collins", "Points": 2292}, {"Rank": 15, "Name": "Beatriz Haddad Maia", "Points": 2215}, {"Rank": 16, "Name": "Petra Kvitova", "Points": 2097}, {"Rank": 17, "Name": "Anett Kontaveit", "Points": 2093}, {"Rank": 18, "Name": "Jelena Ostapenko", "Points": 1986}, {"Rank": 19, "Name": "Ekaterina Alexandrova", "Points": 1910}, {"Rank": 20, "Name": "Liudmila Samsonova", "Points": 1910}]
+    },
+    "height": 450,
+    "width": 250,
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "Points", "type": "quantitative", "axis": {"labelAngle": 0}},
+      "y": {"field": "Name", "type": "nominal", "sort": "quantitative"},
+      "color": {"value": "#DC6E6E"}
+    }
+  }
+  
