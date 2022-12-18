@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Unemployment rate - UK",
-    "subtitle": "Aged 16 and over, seasonally adjusted (%). Source: ONS",
+    "subtitle": "Aged 16 and over (%). Source: ONS",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
