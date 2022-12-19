@@ -23,7 +23,7 @@ h1, h2, h3, p{
     
 .myWeek1{
     margin: auto;
-    max-width: 600px;
+    max-width: 800px;
     background-color: rgb(220, 220, 220);
 }
 
@@ -47,21 +47,102 @@ h1, h2, h3, p{
 
 .myWeek5{
     margin: auto;
-    max-width: 600px;
+    max-width: 1000px;
     background-color: rgb(220, 220, 220);
 }
 
 /* Set the apperance of the class, chart */
 .chart{
     background-color: rgb(210, 187, 145);
-    width:330px;
+    padding: 10px 10px 10px 10px;
     border-width: 15px;
     border-style: solid;
     border-radius: 5px;
     border-color: rgb(84, 77, 77);
-      
+    
 }
 
+#GraphContainer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+}
+
+#GraphContainer2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+}
+
+#GraphContainer3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+}
+
+.Container {
+    margin: auto;
+    width:50%;
+    justify-content: center;
+    align-content: center;
+}
+
+.chartGrid {
+    background-color: rgb(210, 187, 145);
+    width:290px;
+    border-width: 15px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(84, 77, 77);
+}
+
+#Chart1 {
+    width:420px;
+    margin: auto;
+    display:block;
+}
+
+#Chart2 {
+    width:390px;
+    margin: auto;
+    display:block;
+}
+
+#Chart3 {
+    width:385px;
+    margin: auto;
+    display:block;
+}
+
+#Chart4 {
+    width:445px;
+    margin: auto;
+    display:block;
+}
+
+#Chart5 {
+    width:520px;
+    margin: auto;
+    display:block;
+}
+
+#Chart6 {
+    width:520px;
+    margin: auto;
+    display:block;
+}
+
+#Chart6 {
+    width:520px;
+    margin: auto;
+    display:block;
+}
+
+#Chart7 {
+    width:435px;
+    margin: auto;
+    display:block;
+}
 
 
     
