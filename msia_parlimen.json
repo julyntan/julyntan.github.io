@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Map of Malaysia",
+    "fontSize": 16,
+    "subtitle": "Parliamentary Seats",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 700,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/parlimen_mini.geojson.txt",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "mercator"},
+  "mark": {
+    "type": "geoshape",
+    "color": "#d2bb91",
+    "stroke": "white",
+    "strokeWidth": 0.8
+  },
+  "encoding": {"tooltip": {"field": "properties.parlimen", "type": "nominal"}},
+  "config": {}
+}

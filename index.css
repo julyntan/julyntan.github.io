@@ -51,6 +51,12 @@ h1, h2, h3, p{
     background-color: rgb(220, 220, 220);
 }
 
+.myWeek7{
+    margin: auto;
+    max-width: 1000px;
+    background-color: rgb(220, 220, 220);
+}
+
 /* Set the apperance of the class, chart */
 .chart{
     background-color: rgb(210, 187, 145);
@@ -132,14 +138,20 @@ h1, h2, h3, p{
     display:block;
 }
 
-#Chart6 {
-    width:520px;
+#Chart7 {
+    width:435px;
     margin: auto;
     display:block;
 }
 
-#Chart7 {
-    width:435px;
+#Chart17 {
+    width:760px;
+    margin: auto;
+    display:block;
+}
+
+#Chart18 {
+    width:880px;
     margin: auto;
     display:block;
 }

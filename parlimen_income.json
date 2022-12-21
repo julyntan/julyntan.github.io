@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Monthly Household Income by Parliamentary Seats",
+    "fontSize": 16,
+    "subtitle": "(in Malaysian Ringgit), Source: DOSM",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 700,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/parlimen_mini.geojson.txt",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "mercator"},
+  "transform": [
+    {
+      "lookup": "properties.parlimen",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/census_parlimen.csv"
+        },
+        "key": "parlimen",
+        "fields": ["income_avg"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.8},
+  "encoding": {
+    "color": {
+      "field": "income_avg",
+      "type": "quantitative",
+      "title": "Household Income"
+    },
+    "tooltip": [
+      {
+        "field": "properties.parlimen",
+        "title": "Parliament",
+        "type": "nominal"
+      },
+      {"field": "income_avg", "title": "Household Income"}
+    ]
+  },
+  "config": {}
+}
