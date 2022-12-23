@@ -1,0 +1,17 @@
+area_type,area,income_mean,expenditure_mean,gini,poverty_rate
+state,Johor,8013,4793,0.366,3.9
+state,Kedah,5522,3359,0.354,8.8
+state,Kelantan,4874,3223,0.378,12.4
+state,Melaka,7741,4955,0.383,3.9
+state,Negeri Sembilan,6707,4350,0.391,4.3
+state,Pahang,5667,3652,0.33,4.3
+state,Perak,5645,3564,0.377,7.3
+state,Perlis,5476,3468,0.334,3.9
+state,Pulau Pinang,7774,4630,0.359,1.9
+state,Sabah,5745,2792,0.397,19.5
+state,Sarawak,5959,3448,0.387,9
+state,Selangor,10827,5830,0.393,1.2
+state,Terengganu,6815,4336,0.335,6.1
+state,W.P. Kuala Lumpur,13257,6913,0.35,0.2
+state,W.P. Labuan,8319,4097,0.333,3.1
+state,W.P. Putrajaya,12840,7980,0.361,0.4
