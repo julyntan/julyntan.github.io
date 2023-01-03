@@ -1,4 +1,4 @@
-income_avg,top_party,Median,Min,Max,Q1,Q3
+income_avg,top_party,mid_box_Income (MYR),lower_whisker_Income (MYR),upper_whisker_Income (MYR),lower_box_Income (MYR),upper_box_Income (MYR)
 6961,BN,5762,3885,11921,5258,6544.5
 13081,PH,8179,4399,20521,6588,11018
 7953,PN,5577,3750,12840,4800,6681
