@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* Set the background color for my page: */
+
+
+body{
+    background-color: rgb(36, 27, 27);
+ }
+
+
+/* Choose the appearance of the tags, h1, h3 and p: */
+h1, h2, h3, p{
+    color:rgb(0, 0, 0);
+    font-family: 'Georgia', 'sansserif';
+    text-align: center;
+}
+    
+.div1{
+    margin: auto;
+    max-width: 600px;
+    background-color: rgb(220, 220, 220);
+
+      
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(100,100,100);
+}
+
+
+/* Set the apperance of the class, chart */
+.links{
+    background-color: white;
+    width:450px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: grey;
+    
+}
