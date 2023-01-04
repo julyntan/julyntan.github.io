@@ -1,0 +1,88 @@
+* {
+    font-family: 'Space Mono', monospace;
+    padding: 10px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+}
+
+#PopUp {
+    text-align: center;
+    font-weight: 900;
+    display: "none";
+}
+
+a {
+    margin-top: 20px;
+    border: 3px solid black;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    font-weight: 900;
+    background-color: rgb(231, 225, 225, .1);
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+    padding: 30px;
+    cursor: pointer;
+}
+
+li {
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+}
+
+body {
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2014/05/03/349010/6e81c023a9239ce44d56c47a0baab577-700.jpg");
+    background-size: 1600px 1000px;
+    transition-property: background-image;
+    transition-duration: 1.5s;
+}
+
+#userForm {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userOutput {
+
+}
+
+#userPopUp {
+    text-align: center;
+    margin-bottom: 2px;
+    color: white;
+}
+
+#stateFlag {
+    display:block;
+    text-align: center;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+#body {
+    background-color: black;
+}
+
+.description {
+    color: white;
+}
