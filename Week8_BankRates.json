@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Week8_BankRates.csv"
+  },
+  "width": 300,
+  "title": {
+    "text": "Bank of England Interest Rates",
+    "subtitle": "%, Source: Bank of England",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Date Format", "title": "Year", "type": "temporal"},
+    "y": {
+      "field": "Bank Rate",
+      "title": "Interest Rate",
+      "type": "quantitative",
+      "scale": {"domain": [0, 12]}
+    },
+    "tooltip": [{"field": "Bank Rate", "type": "quantitative"}]
+  },
+  "config": {}
+}
