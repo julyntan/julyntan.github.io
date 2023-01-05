@@ -21,7 +21,7 @@
       "type": "quantitative",
       "scale": {"domain": [0, 12]}
     },
-    "tooltip": [{"field": "Bank Rate", "type": "quantitative"}]
+    "tooltip": [{"field": "Bank Rate", "type": "quantitative"}, {"field": "Date Format", "type": "temporal", "title": "Date"}]
   },
   "config": {}
 }
