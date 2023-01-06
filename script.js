@@ -3,15 +3,15 @@ function displayPopUp(num) {
     var backgroundElem = document.getElementById('body');
 
     if (num === 1) {
-        elem.textContent = "Information regarding TAB1";
+        elem.textContent = "An Analysis of the 15th Malaysian General Elections";
         elem.style.display = "block";
         backgroundElem.style.backgroundImage = "url('https://www.wallpaperup.com/uploads/wallpapers/2014/05/03/349010/6e81c023a9239ce44d56c47a0baab577-700.jpg')";
     } else if (num === 2) {
-        elem.textContent = "Information concerning TAB2";
+        elem.textContent = "Weekly Data Science tasks";
         elem.style.display = "block";
         backgroundElem.style.backgroundImage = "url('https://twodaysinacity.com/wp-content/uploads/2021/04/Top-view-of-kuala-lumpur-skyline-Malaysia.jpg')";
     } else {
-        elem.textContent = "Information holding information about TAB3";
+        elem.textContent = "My GitHub Repository";
         elem.style.display = "block";
         backgroundElem.style.backgroundImage = "url('https://idsb.tmgrup.com.tr/ly/uploads/images/2021/09/19/145613.jpg')";
     }
