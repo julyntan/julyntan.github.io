@@ -5,7 +5,7 @@
     "text": "GDP of South East Asian Countries",
     "subtitle": "GDP per capita (PPP at current international $) 2002-2021, Source: World Bank",
     "subtitleFontStyle": "italic",
-    "subtitleFontSize": 9,
+    "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
@@ -353,13 +353,14 @@
   "width": 350,
   "mark": "area",
   "encoding": {
-    "x": {"field": "Time", "type": "nominal"},
-    "y": {"field": "GDP per capita", "type": "quantitative"},
+    "x": {"field": "Time", "type": "nominal", "title": "Year"},
+    "y": {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"},
     "color": {
       "field": "Country Name",
       "type": "nominal",
-      "legend": {"orient": "top"}
-    }
+      "legend": {"orient": "top", "offset":14}
+    },
+    "tooltip": [{"field": "Time", "type": "nominal", "title": "Year"}, {"field": "Country Name", "type": "nominal", "title": "Country"}]
   },
   "config": {}
 }

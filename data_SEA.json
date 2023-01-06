@@ -353,9 +353,11 @@
   },
   "mark": "line",
   "encoding": {
-    "x": {"field": "Time", "type": "nominal"},
-    "y": {"field": "GDP per capita", "type": "quantitative"},
-    "color": {"field": "Country Name", "type": "nominal"}
+    "x": {"field": "Time", "type": "nominal", "title": "Year"},
+    "y": {"field": "GDP per capita", "type": "quantitative", "title": "GDP per Capita"},
+    "color": {"field": "Country Name", "type": "nominal"},
+    "tooltip": [{"field": "Time", "type": "nominal", "title": "Year"}, {"field": "Country Name", "type": "nominal", "title": "Country"}]
   },
+  
   "config": {}
 }
