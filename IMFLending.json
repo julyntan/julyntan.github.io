@@ -14,7 +14,7 @@
   "transform": [{"calculate": "datum.Totals/1000000000", "as": "billions"}],
   "height": 300,
   "width": 300,
-  "mark": {"type": "bar", "color": "rgb(0,47,167)"},
+  "mark": {"type": "bar", "color": "rgb(42, 112, 100)"},
   "encoding": {
     "x": {
       "field": "Year",
@@ -24,7 +24,7 @@
     "y": {
       "field": "billions",
       "type": "quantitative",
-      "title": "",
+      "title":"",
       "axis": {"grid": false}
     }
   }
