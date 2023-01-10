@@ -9,7 +9,7 @@
   "mark": {"type": "bar", "width": 65},
   "encoding": {
     "x": {"field": "top_party", "type": "nominal", "title": "Coalition", "sort": ["PN", "PH", "BN", "Others"]},
-    "y": {"field": "result", "type": "quantitative", "title": "Number of Seats Won"},
+    "y": {"field": "result", "type": "quantitative", "title": "Number of Seats Won", "scale": {"domain": [0, 80]}, "axis": {"tickCount": 6}},
     "color": {"field": "top_party",
       "type": "nominal",
       "scale": {
