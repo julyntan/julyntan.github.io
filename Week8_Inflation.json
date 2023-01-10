@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Google's stock price over time.",
+  "data": {"url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/week_8_inflation.csv"},
+  "title": {
+    "text": "Inflation Rate (CPIH)",
+    "subtitle": "%, Source: ONS",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 9,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Dates", "type": "temporal", "title": "Year"},
+    "y": {"field": "Inflation Rate", "type": "quantitative", "title": "Inflation Rate (%)"},
+    "tooltip": [{"field": "year", "type": "nominal", "title": "Date"}, {"field": "Inflation Rate", "type": "quantitative"}],
+    "color":{"value": "red"}
+  }
+
+}
