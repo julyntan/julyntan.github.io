@@ -21,17 +21,107 @@
     
     <div class="div1">
        
-        <h1>Malaysia's 15th General Elections</h1>
+        <h1>Malaysia's 15th General Elections </h1>
         <h3>- An Analysis -</h3>
 
-        <p>Malaysia has just had its 15th General Elections, with many commenting on how the results have shown that the culturally and ethnically diverse nation is more polarised now than ever. </p>
+        <p>Having just concluded its 15th General Elections, many have commented on how the election results have revealed that the culturally and ethnically diverse nation of Malaysia is deeply divided.</p>
+        <p>Malaysia has three main ethnic groups - the Bumiputeras (consisting of Malays and indigenous people), Chinese, and Indians.</p>
+        
+        <h3>Chart #1 </h3>
         <div class="chart" id="Chart1"></div>
+                                 
 
-        <h3></h3>
-        <p></p>
-        <div class="chart" id="Chart2"> </div>
+        <p>Prior to the 15th General Elections, there were only two major coalitions - Pakatan Harapan (PH) (viewed as more progressive and the equivalent of the Democrats in US politics) and Barisan Nasional (BN) (perceived as more conservative and most recently tainted with corruption scandals). This election saw the birth of a new far-right, extremist coalition called Perikatan Nasional (PN).</p>
+        
+        <p>The aim of this project is to study the various demographic factors influencing political affiliation across Malaysia and to answer the question, 
+            <h3>Is Malaysia polarised?</h3> 
+            This analysis focuses the top-performing party coalitions: PH and PN, which are also the most ideologically-opposed. [BN sits between both coalitions where ideologies are concerned while “Other” parties tend to side with the winning coalition].
+            </p>
+        
+
+        
+        <h3>Chart #2 - Election Results</h3>
+        <div class="chart" id="Chart2"></div>
+
+        <h3>Chart #2</h3>
+        <div class="chart" id="Chart3"></div>
+
+
+
+        <h3>Chart #3 - Impact of voter Ethnicity</h3>
+        <p>As parties such as BN and PN often use the majority race as a political tool, they are said to have a large Bumiputera voter base. Conversely, majority of non-Bumiputera citizens are believed to be PH supporters.</p>
+        <p>This divide is clearly observed in the graphs below. For PN, a higher proportion of Bumiputeras is associated with a larger proportion of votes received. Conversely, PH's vote share decreases as Bumiputera proportion increases. </p>
+        <div class="png" id="chart_img">
+            <img src = "Chart_3_PN.png" />
+          </div>
+          <div class="png" id="chart_img">
+            <img src = "Chart_3_PH.png" />
+          </div>
+        <p>While proportion of Bumiputera residents and percentage of votes garnered are strongly correlated, further examination is necessary to identify a causal relationship.</p>
+        
+
+
+        <h3>Chart #4 - Urbanization Level</h3>
+        <div class="chart" id="Chart4"></div>
+        <p>This chart highlights the urban-rural divide across Malaysia. The large rural support for parties such as PN, BN and Others highlights their strong grassroot appeal. On the contrary, PH sees a large urban support and no rural seats won. This explains the lack of PH presence in the Chart #2 results map, as rural seats are of larger area but do not automatically signify more support.
+            However, it may not necessarily be urbanization levels itself, but rather factors associated with urbanization such as education levels that influence voter political affiliations. 
+            </p>
+
+
+
+        <h3>Chart #5 - Household Income</h3>
+        <div class="chart" id="Chart5"></div>
+
+        <p>This boxplot shows the disparity in income levels in areas won by PH as compared to PN and BN, highlighting the socioeconomic divide in the country. </p>
+
+
+        <h3>Chart #6 - Poverty Rate</h3>
+        <div class="chart" id="Chart6"></div>
+        <p>For Chart #6, I regressed the percentage of votes received on poverty rate in all seats contested by the individual coalitions. The graph indicates a positive correlation between vote share and poverty rate for PN, but a negative correlation for PH.</p>
+        
+        <h3>Challenges</h3>
+
+        <p>Colab was largely used to clean and obtain necessary values for the data analysis and visualisation. This included dropping unwanted values, renaming, and regrouping values, as well as calculating new values. </p>
+        <p>I faced challenges with Colab when it could not read the CSV file and would not drop an unwanted value. To fix this, I set a specific encoding and opened the file in Visual Studio Code which showed an unknown symbol corrupting the dataset. I then used Colab to drop this.</p>
+        <p>Data visualisation for Chart #3 was particularly challenging as I attempted to plot the scatter graph with a regression line on Colab. As I split the graph into “Win” and “Loss” classes, the best fit line did not know whether to go through individual classes or all data points. To fix this, I first plotted the best fit line on a scatter without classes, and then overlayed this with a scatter only showing “Wins”. While plotting the graphs, I also ran into a problem when the graph would not display. This was amended using the hv.extension('bokeh') command.</p>
+        <p>Stata was used to merge and clean the dataset for Chart #4, while Vega-Lite was used to visualise all the charts except for Chart #3.</p>
+        <p>Unfortunately, though I wished to create a chart that would automatically update, I could not find any Malaysian API datasets. However, an advantage of this is that my chart and data is not dependent on the API.</p>
+
+
+        <h3>Conclusion</h3>
+        
+        <p>As seen from the data analysis, the PH and PN voter base are very much different. Ethnicity, socioeconomic class, and level of development are all indicators of political affiliation in Malaysian politics. The data supports the perception that PH is a more progressive, modern coalition that appeals to non-Bumiputeras while PN is the opposite.</p>
+        <p>Where politics is concerned, there is clear polarization in Malaysia especially with regards to ethnicity. This is cause for concern as it may lead to political instability, debilitated policymaking, and communal tensions (Welsh, 2020). Hence, it's leaders must step up to bridge the gap across Malaysians. </p>
+
+
     </div> 
 
 
 </body>
+
+<script>
+    //Define charts:
+    var myChart1 = "Chart_1.json";
+    var myChart2 = "Chart_2.json";
+    var myChart3 = "Chart_2_2.json";
+    var myChart4 = "Chart_4.json";
+    var myChart5 = "Chart_5.json";
+    var myChart6 = "Chart_6.json";
+   
+
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+    
+
+</script>    
+
+
+
+
 </html>

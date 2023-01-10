@@ -6,29 +6,45 @@
 
 
 body{
-    background-color: rgb(36, 27, 27);
+    background-color:#e45756;
  }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
-h1, h2, h3, p{
+h1, h2{
     color:rgb(0, 0, 0);
     font-family: 'Georgia', 'sansserif';
     text-align: center;
 }
+
+h3{
+    color:rgb(0, 0, 0);
+    font-family: 'Georgia', 'sansserif';
+    text-align: center;
+    font-size: 16
+}
+
+p{
+    color:rgb(0, 0, 0);
+    font-family: 'Georgia', 'sansserif';
+    text-align: center;
+    font-size: 14;
+}
+
     
 .div1{
     margin: auto;
-    max-width: 600px;
-    background-color: rgb(220, 220, 220);
-
+    max-width: 900px;
+    background-color: #ebe1de;
+    line-height: 1.4;
       
-    border-width: 3px;
+    border-width: 5px;
     border-style: solid;
     border-radius: 10px;
-    border-color: rgb(100,100,100);
-}
+    border-color: #4c78a8;
+    padding: 14px;
 
+}
 
 /* Set the apperance of the class, chart */
 .links{
@@ -39,4 +55,59 @@ h1, h2, h3, p{
     border-radius: 10px;
     border-color: grey;
     
+}
+
+.png{
+    background-color: white;
+    width: 700px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #4c78a8;
+    margin: auto;
+}
+
+
+#Chart1 {
+    width:350px;
+    height:380px;
+    margin: auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Chart2 {
+    width:800px;
+    height:400px;
+    margin: auto;
+    display:block;
+}
+
+#Chart3 {
+    width:350px;
+    height:350px;
+    margin: auto;
+    display:block;
+}
+
+#Chart4 {
+    width:460px;
+    height:460px;
+    margin: auto;
+    display:block;
+}
+
+#Chart5 {
+    width:400px;
+    height:500px;
+    margin: auto;
+    display:block;
+}
+
+#Chart6 {
+    width:800px;
+    height:380px;
+    margin: auto;
+    display:block;
 }
