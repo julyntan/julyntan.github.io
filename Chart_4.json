@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Seats Won by Urbanization Level",
+    "fontSize": 18,
+    "subtitle": "Source: Tindak Malaysia",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_4_Urbanization.csv"
+  },
+  "config": {
+    "axis": {"labelColor": "black", "labelFontSize": 12, "titleFontSize": 13}
+  },
+  "mark": "bar",
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "top_party",
+      "sort": ["PH", "PN", "BN", "Others"],
+      "type": "ordinal",
+      "title": "Coalition",
+      "axis": {"domain": false, "grid": false, "ticks": false}
+    },
+    "y": {
+      "field": "result",
+      "type": "quantitative",
+      "title": "Number of Seats Won",
+      "axis": {"domain": false, "grid": false, "ticks": false}
+    },
+    "color": {
+      "field": "URBANRURALCLASSIFICATION2022",
+      "legend": {
+        "orient": "right",
+        "symbolType": "triangle",
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      },
+      "type": "nominal",
+      "scale": {
+        "domain": ["Rural", "Semi Urban", "Urban"],
+        "range": ["#72b7b2", "#e45756", "#bab0ac"]
+      },
+      "title": "Urbanization Level"
+    },
+    "tooltip": [
+      {
+        "field": "URBANRURALCLASSIFICATION2022",
+        "title": "Urbanization Level",
+        "type": "nominal"
+      },
+      {"field": "top_party", "title": "Coalition"}
+    ]
+  }
+}

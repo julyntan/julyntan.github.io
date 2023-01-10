@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Income Level by Seats Won by Party",
+    "fontSize": 18,
+    "subtitle": "Source: DOSM",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_5.csv"
+  },
+  "width": 300,
+  "height": 350,
+  "mark": {"type": "boxplot", "extent": "min-max"},
+  "encoding": {
+    "x": {"field": "top_party", "type": "nominal", "title": "Coalition"}
+  },
+ 
+  "layer": [
+    {
+      "transform": [{"filter": "datum.top_party != 'Others'"}],
+      "mark": {"type": "rule"},
+      "encoding": {
+        "y": {
+          "field": "min",
+          "type": "quantitative",
+          "scale": {"zero": false},
+          "title": "Average Income (MYR)"
+          
+        },
+        "y2": {"field": "max"}
+      }
+    },
+      
+    {
+      "transform": [{"filter": "datum.top_party != 'Others'"}],
+      "mark": {"type": "bar", "size": 35},
+      "encoding": {
+        "y": {"field": "q1", "type": "quantitative"},
+        "y2": {"field": "q3"},
+        "color": {
+          "field": "top_party",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["PN", "PH", "BN", "Others"],
+            "range": ["#72b7b2", "#e45756", "#4c78a8", "#bab0ac"]
+          }
+        },
+        "tooltip": [
+      
+      {"field": "min", "title": "Minimum", "type": "nominal"},
+      {"field": "q1", "title": "1st Quartile", "type":
+      "quantitative"},
+      {"field": "median", "title": "Median", "type": "quantitative"},
+      {"field": "q3", "title": "3rd Quartile", "type":
+      "quantitative"},
+      {"field": "max", "title": "Maximum", "type":
+      "quantitative"}
+    ]}
+    },
+    {
+      "transform": [{"filter": "datum.top_party != 'Others'"}],
+      "mark": {"type": "tick", "color": "white", "size": 25},
+      "encoding": {
+        "x": {"field": "top_party", "type": "nominal"},
+        "y": {"field": "median", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {"labelColor": "black", "labelFontSize": 12, "titleFontSize": 13}
+  }
+}
