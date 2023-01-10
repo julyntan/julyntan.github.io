@@ -86,7 +86,7 @@ p{
 
 #Chart3 {
     width:350px;
-    height:350px;
+    height:390px;
     margin: auto;
     display:block;
 }
@@ -99,7 +99,7 @@ p{
 }
 
 #Chart5 {
-    width:400px;
+    width:600px;
     height:500px;
     margin: auto;
     display:block;
@@ -107,7 +107,34 @@ p{
 
 #Chart6 {
     width:800px;
-    height:380px;
+    height:450px;
     margin: auto;
     display:block;
+    padding: 10px 10px 10px 10px;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+  }
+
+.containertext{
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 2px 2px 2px;
+}
+.container {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px 2px 2px 2px;
 }
