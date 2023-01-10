@@ -6,6 +6,10 @@
 "anchor": "middle" },
   
   "data": {"url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_2_candidates_ge15_top.csv"},
+  "transform": [{
+    "aggregate": [{"op": "sum", "field": "result", "as": "result"}],
+    "groupby": ["top_party"]
+  }],
   "mark": {"type": "bar", "width": 65},
   "encoding": {
     "x": {"field": "top_party", "type": "nominal", "title": "Coalition", "sort": ["PN", "PH", "BN", "Others"]},
