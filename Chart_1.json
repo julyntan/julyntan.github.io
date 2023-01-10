@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Ethnic Composition of Malaysia, 2020",
+    "fontSize": 18,
+    "subtitle": "'000 Persons. Source: Department of Statistics Malaysia (DOSM)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "data": {
+    "values": [
+      {"category": "Bumiputera", "value": 21077.5},
+      {"category": "Chinese", "value": 6947},
+      {"category": "Others", "value": 330.2},
+      {"category": "Indians", "value": 2130.1}
+    ]
+  },
+  "width": 350,
+  "height": 350,
+  "autosize": "fit",
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "legend": {
+        "title": "Ethnic Group",
+        "orient": "bottom",
+        "labelColor": "black",
+        "offset": 15,
+        "labelFontSize": 12,
+        "titleFontSize": 13
+      },
+      "sort": {"field": "value", "order": "descending"},
+      "scale": {
+        "domain": ["Bumiputera", "Chinese", "Indians", "Others"],
+        "range": ["#4c78a8", "#e45756", "#72b7b2", "#bab0ac"]
+      }
+    },
+    "tooltip": [
+      {"field": "category", "type": "nominal", "title": "Ethnic Group"},
+      {"field": "value", "type": "quantitative", "title": "Population"}
+    ]
+  },
+  "config": {}
+}

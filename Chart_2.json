@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Results of the 15th General Elections of Malaysia",
+    "fontSize": 18,
+    "subtitle": "Source: Election Commission Malaysia (SPR)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "width": 800,
+  "height": 370,
+  "autosize": "fit",
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/parlimen_mini.geojson.txt",
+    "format": {"property": "features"}
+  },
+
+   "selection": {
+    "coalition_selector": {
+      "type": "single",
+      "fields": ["top_party"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "PH",
+          "PN",
+          "BN",
+          "Others"
+        ],
+
+        "labels": [
+          "All",
+          "PH",
+          "PN",
+          "BN",
+          "Others"
+        ],
+
+        "name": "Select Coalition"}}
+        },
+  "projection": {"type": "mercator"},
+  "transform": [{"filter": {"selection": "coalition_selector"}},
+    {
+      "lookup": "properties.parlimen",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_2_candidates_ge15_top.csv"
+        },
+        "key": "parlimen",
+        "fields": ["top_party"]
+      }
+    }
+  ],
+ 
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.7},
+  "encoding": {
+    "color": {
+      "field": "top_party",
+      "type": "nominal",
+      "title": "Coalition",
+      "legend": {
+        "orient": "bottom",
+        "titleFontSize": 13.5,
+        "labelFontSize": 13,
+        "symbolType": "square"
+      },
+      "sort": ["BN", "PH", "PN", "Others"],
+      "scale": {
+        "domain": ["BN", "PH", "PN", "Others"],
+        "range": ["#4c78a8", "#e45756", "#72b7b2", "#bab0ac"]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.parlimen",
+        "title": "Parliament",
+        "type": "nominal"
+      },
+      {"field": "top_party", "title": "Coalition"}
+    ]
+  },
+  "config": {}
+}

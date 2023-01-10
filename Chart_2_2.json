@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 250,
+    "title": {"text": "Number of Seats won by each Coalition",
+  "anchor": "middle" },
+    
+    "data": {"url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_2_candidates_ge15_top.csv"},
+    "mark": {"type": "bar", "width": 65},
+    "encoding": {
+      "x": {"field": "top_party", "type": "nominal", "title": "Coalition", "sort": ["PN", "PH", "BN", "Others"]},
+      "y": {"field": "result", "type": "quantitative", "title": "Number of Seats Won"},
+      "color": {"field": "top_party",
+        "type": "nominal",
+        "scale": {
+          "domain": ["PN", "PH", "BN", "Others"],
+          "range": ["#72b7b2", "#e45756", "#4c78a8", "#bab0ac"]
+        },
+        "title": "Coalition"
+      }}
+    }
+  
