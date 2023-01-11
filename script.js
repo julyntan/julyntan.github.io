@@ -10,11 +10,19 @@ function displayPopUp(num) {
         elem.textContent = "Weekly Data Science tasks";
         elem.style.display = "block";
         backgroundElem.style.backgroundImage = "url('https://twodaysinacity.com/wp-content/uploads/2021/04/Top-view-of-kuala-lumpur-skyline-Malaysia.jpg')";
-    } else {
+    } else if (num === 0) {
+        elem.textContent = "Back to Main Page";
+        elem.style.display = "block";
+        backgroundElem.style.backgroundImage = "url('https://twodaysinacity.com/wp-content/uploads/2021/04/Top-view-of-kuala-lumpur-skyline-Malaysia.jpg')";
+    } else if (num === 3) {
         elem.textContent = "My GitHub Repository";
         elem.style.display = "block";
         backgroundElem.style.backgroundImage = "url('https://idsb.tmgrup.com.tr/ly/uploads/images/2021/09/19/145613.jpg')";
-    }
+    } else if (num === 4) {
+        elem.textContent = "Back to Main Page";
+        elem.style.display = "block";
+        backgroundElem.style.backgroundImage = "url('https://www.wallpaperup.com/uploads/wallpapers/2014/05/03/349010/6e81c023a9239ce44d56c47a0baab577-700.jpg')";
+    } 
     elem.style.border = "2px solid black";
     elem.style.backgroundColor = "black";
     elem.style.color = "white";

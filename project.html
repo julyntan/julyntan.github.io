@@ -15,9 +15,21 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <!--Connecting to local script.js-->
+    <script src = "script.js"></script>
 </head>
 
 <body>
+
+    <div id = "body">
+        <ul class = "navTab">
+            <li class = "nav"><a href = "index.html" class="TAB1" onmouseover="displayPopUp(4);">INDEX</a></li>
+            <li class = "nav"><a href = "portfolio.html" class="TAB2" onmouseover="displayPopUp(2);">PORTFOLIO</a></li>
+            <li class = "nav"><a href = "https://github.com/julyntan/julyntan.github.io" class="TAB3" onmouseover="displayPopUp(3);">GITHUB</a></li>
+        </ul>
+        <p id = "PopUp"><strong></strong></p>
+    </div>
     
     <div class="div1">
 
