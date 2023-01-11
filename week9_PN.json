@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Percentage of Votes Garnered vs. Percentage of Bumiputera Residents",
+        "subtitle": "Source: Department of Statistics Malaysia (DOSM) and Election Commission (SPR)",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black",
+        "subtitleColor": "black",
+        "offset": 20
+      },
+    "width": 400,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_6_PN.csv"
+    },
+    "params": [{
+      "name": "view",
+      "select": "interval",
+      "bind": "scales"
+    }],
+    "mark": "circle",
+    "encoding": {
+      "y": {
+        "field": "Percentage of votes garnered",
+        "type": "quantitative",
+        "scale": {"domain": [0, 100]},
+        "axis": {"minExtent": 30, "grid": false}
+      },
+      "x": {
+        "field": "Percentage of bumiputera residents",
+        "type": "quantitative",
+        "scale": {"domain": [10, 100]},
+        "axis": {"minExtent": 30, "grid": false}
+      },
+      "size": {"field": "total_seat_votes", "type": "quantitative", "legend":null},
+      "color": {"value": "rgb(42, 112, 100)"},
+      "tooltip":[
+          {"field":"Percentage of bumiputera residents", "type": "quantitative", "format": ".1f"},
+          {"field":"Percentage of votes garnered", "type": "quantitative", "format": ".1f"},
+          {"field":"total_seat_votes", "type": "quantitative"}
+  
+        ]
+    }
+  }
