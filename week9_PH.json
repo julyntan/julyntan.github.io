@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Pakatan Harapan Coalition - Percentage of Votes Garnered vs. Poverty Rate",
+    "subtitle": "Source: Department of Statistics Malaysia (DOSM)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black",
+    "subtitleColor": "black",
+    "offset": 20
+  },
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_6.csv"
+  },
+  "height": 350,
+  "width": 350,
+  "transform": [{"filter": "datum.top_party == 'PH'"}],
+  "layer": [
+    {
+    "selection": {
+    "paintbrush": {"type": "multi", "on": "mouseover", "nearest": true},
+    "grid": {"type": "interval"}},
+      "mark": {
+        "type": "circle",
+        "point": false,
+        "color": "#e45756"
+      },
+      
+      "encoding": {
+        "x": {
+          "field": "poverty_incidence",
+          "type": "quantitative",
+          "title": "Poverty Rate",
+          "axis": {
+            "title": "Poverty Rate"
+          },
+          "scale": {"domain": [0, 50]}
+        },
+        "y": {
+          "field": "Percentage of votes garnered",
+          "type": "quantitative",
+          "title": "% of Votes",
+          "axis": {
+            "title": "Percentage of Votes (%)"
+          }
+        },
+        "size": {
+          "condition": {
+          "selection": "paintbrush",
+          "value": 250,
+          "init": {"value": 30}
+        
+      },
+      "value": 70
+    },
+      
+        
+       "tooltip": [
+          {
+            "field": "Percentage of votes garnered",
+            "type": "quantitative",
+            "title": "% of Votes",
+            "format": ".3"
+          
+          },
+          {"field": "poverty_incidence", "type": "quantitative", "title": "Poverty Rate"},
+          {"field": "parlimen", "type": "nominal", "title": "Parliamentary Seat"}
+        ]
+      }
+    },
+    {
+      
+      "mark": {"type": "line", "color":"black", "strokeWidth": 2},
+      "transform": [{"regression": "Percentage of votes garnered", "on": "poverty_incidence", "extent": [0, 32.5]
+      }],
+      "encoding": {
+        "x": {
+          "field": "poverty_incidence",
+          "type": "quantitative",
+          "scale": {"domain": [0, 50]}
+        },
+        "y": {
+          "field": "Percentage of votes garnered",
+          "type": "quantitative",
+          "scale": {"domain": [0, 100]}
+        }
+      }
+    },
+    {
+      "transform": [
+        {"regression": "Percentage of votes garnered", "on": "poverty_incidence", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#e45756",
+        "x": "width",
+        "align": "right",
+        "y": -6,
+        "size":14
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+} 
