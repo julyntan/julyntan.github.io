@@ -15,10 +15,17 @@ body{
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
-h1, h2, h3, p{
+h3, p{
     color:rgb(8, 8, 8);
     font-family: 'Roboto', sans-serif;
     text-align: center;
+}
+
+h1, h2{
+    color:rgb(8, 8, 8);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
 }
     
 .myWeek1{
@@ -214,6 +221,18 @@ h1, h2, h3, p{
     display:block;
 }
 
+#Chart21 {
+    width:530px;
+    margin: auto;
+    display:block;
+}
+
+#Chart22 {
+    width:530px;
+    margin: auto;
+    display:block;
+}
+
 /* Changing the appearance of nav: */
 ul {
     text-align: center;
@@ -258,4 +277,3 @@ li {
     transition-duration: 1.5s;
     padding: 0.5em 0.5em 0.5em;
 }
-
