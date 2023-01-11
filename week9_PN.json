@@ -10,8 +10,8 @@
         "subtitleColor": "black",
         "offset": 20
       },
-    "width": 400,
-    "height": 300,
+    "width": 350,
+    "height": 350,
     "data": {
       "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_6_PN.csv"
     },
