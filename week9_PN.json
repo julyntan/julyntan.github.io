@@ -15,24 +15,20 @@
     "data": {
       "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_6_PN.csv"
     },
-    "params": [{
-      "name": "view",
-      "select": "interval",
-      "bind": "scales"
-    }],
+    
     "mark": "circle",
     "encoding": {
       "y": {
         "field": "Percentage of votes garnered",
         "type": "quantitative",
         "scale": {"domain": [0, 100]},
-        "axis": {"minExtent": 30, "grid": false}
+        "axis": {"grid": false}
       },
       "x": {
         "field": "Percentage of bumiputera residents",
         "type": "quantitative",
         "scale": {"domain": [10, 100]},
-        "axis": {"minExtent": 30, "grid": false}
+        "axis": {"grid": false}
       },
       "size": {"field": "total_seat_votes", "type": "quantitative", "legend":null},
       "color": {"value": "rgb(42, 112, 100)"},
