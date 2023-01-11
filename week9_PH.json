@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Pakatan Harapan Coalition - Percentage of Votes Garnered vs. Poverty Rate",
-    "subtitle": "Source: Department of Statistics Malaysia (DOSM)",
+    "text": ["Pakatan Harapan Coalition", "Percentage of Votes Garnered vs. Poverty Rate"],
+    "subtitle": "Source: Department of Statistics Malaysia (DOSM), Election Commission (SPR)",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -14,8 +14,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_6.csv"
   },
-  "height": 350,
-  "width": 350,
+  "height": 400,
+  "width": 400,
   "transform": [{"filter": "datum.top_party == 'PH'"}],
   "layer": [
     {
