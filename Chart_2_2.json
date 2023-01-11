@@ -3,7 +3,10 @@
   "width": 300,
   "height": 300,
   "title": {"text": "Number of Seats won by each Coalition",
-"anchor": "middle" },
+  "subtitle": "Source: Election Commission of Malaysia (SPR)",
+  "subtitleFontStyle": "italic",
+  "subtitleFontSize": 11,
+  "anchor": "middle" },
   
   "data": {"url": "https://raw.githubusercontent.com/julyntan/julyntan.github.io/main/Chart_2_candidates_ge15_top.csv"},
   "transform": [{

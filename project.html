@@ -38,9 +38,13 @@
         <h3>- An Analysis -</h3>
 
         <p>Having just concluded its 15th General Elections, many have commented on how the election results have revealed that the culturally and ethnically diverse nation of Malaysia is deeply divided.</p>
+        
+
         <p>Malaysia has three main ethnic groups - the Bumiputeras (consisting of Malays and indigenous people), Chinese, and Indians.</p>
         </div>
 
+        <div class="button"><a href=" https://www.straitstimes.com/asia/se-asia/malaysia-s-election-reveals-deeply-divided-electorate">News Article</a>
+        </div>
 
         <div class="containertext">
         <h3>Chart #1 </h3> </div>
@@ -62,7 +66,7 @@
         
 
         <div class="containertext">
-        <h3>Chart #2 - Election Results</h3></div>
+        <h3>Chart #2 - Election Results - Map</h3></div>
         <div class="container">
         <div class="chart" id="Chart2"></div></div>
 
@@ -70,7 +74,7 @@
             <a href="https://colab.research.google.com/drive/15W74AIrN_U0DHklfyjUGyLh4liDXju7r?usp=sharing">Colab 2</a></div>
         
         <div class="containertext">
-                <h3>Chart #2</h3></div>
+                <h3>Election Results - Bar Chart</h3></div>
         <div class="container">
         <div class="chart" id="Chart3"></div></div>
 
@@ -146,9 +150,9 @@
 
         <p>Colab was largely used to clean and obtain necessary values for the data analysis and visualisation. This included dropping unwanted values, renaming, and regrouping values, as well as calculating new values. </p>
         <p>I faced challenges with Colab when it could not read the CSV file and would not drop an unwanted value. To fix this, I set a specific encoding and opened the file in Visual Studio Code which showed an unknown symbol corrupting the dataset. I then used Colab to drop this.</p>
-        <p>Data visualisation for Chart #3 was particularly challenging as I attempted to plot the scatter graph with a regression line on Colab. As I split the graph into “Win” and “Loss” classes, the best fit line did not know whether to go through individual classes or all data points. To fix this, I first plotted the best fit line on a scatter without classes, and then overlayed this with a scatter only showing “Wins”. While plotting the graphs, I also ran into a problem when the graph would not display. This was amended using the hv.extension('bokeh') command.</p>
+        <p>Chart#3 (Plotting Scatter graph and Regression Line) - As I split the graph into “Win” and “Loss” classes, the best fit line did not know whether to go through individual classes or all data points. To fix this, I first plotted the best fit line on a scatter without classes, and then overlayed this with a scatter only showing “Wins”. While plotting the graphs, I also ran into a problem when the graph would not display. This was amended using the hv.extension('bokeh') command.</p>
         <p>Stata was used to merge and clean the dataset for Chart #4, while Vega-Lite was used to visualise all the charts except for Chart #3.</p>
-        <p>Unfortunately, though I wished to create a chart that would automatically update, I could not find any Malaysian API datasets. However, an advantage of this is that my chart and data is not dependent on the API.</p>
+        <p>Unfortunately, though I wished to create a chart that would automatically update, I could not find any Malaysian API datasets. However, an advantage of this is that my chart data is not dependent on an API.</p>
         </div>
 
         <hr style="height:2px;border-width:0;color:#4c78a8 ray;background-color:#4c78a8">
@@ -157,9 +161,20 @@
         <div class="containertext">
         <h3>Conclusion</h3>
         
-        <p>As seen from the data analysis, the PH and PN voter base are very much different. Ethnicity, socioeconomic class, and level of development are all indicators of political affiliation in Malaysian politics. The data supports the perception that PH is a more progressive, modern coalition that appeals to non-Bumiputeras while PN is the opposite.</p>
+        <p>As seen from the data analysis, the PH and PN voter base are very much disparate. Ethnicity, socioeconomic class, and level of development are all indicators of political affiliation in Malaysian politics. The data supports the perception that PH is a more progressive, modern coalition that appeals to non-Bumiputeras while PN is the opposite.</p>
         <p>Where politics is concerned, there is clear polarization in Malaysia especially with regards to ethnicity. This is cause for concern as it may lead to political instability, debilitated policymaking, and communal tensions (Welsh, 2020). Hence, it's leaders must step up to bridge the gap across Malaysians. </p>
         </div>
+
+        <hr style="height:2px;border-width:0;color:#4c78a8 ray;background-color:#4c78a8">
+
+        <div class="containertext">
+        <h3>Sources</h3></div>
+
+        <div class="button"> 
+            <a href="https://dashboard.spr.gov.my/#!/home">SPR Website</a>
+            <a href="https://github.com/dosm-malaysia/data-open">DOSM</a>
+            <a href="https://github.com/TindakMalaysia">Tindak Malaysia</a> 
+            <a href="https://carnegieendowment.org/2020/08/18/malaysia-s-political-polarization-race-religion-and-reform-pub-82436">(Welsh,2020)</a></div>
 
     </div> 
 
